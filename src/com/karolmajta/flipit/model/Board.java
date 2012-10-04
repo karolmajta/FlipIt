@@ -1,5 +1,7 @@
 package com.karolmajta.flipit.model;
 
+import java.util.Random;
+
 public class Board implements IBoard {
 	private Piece [][] pieces;
 	private final Piece [][] solution;
@@ -91,4 +93,18 @@ public class Board implements IBoard {
 		}
 		return solved;
 	}
+
+	@Override
+	public Board shuffle(int times) {
+		Random r = new Random();
+		Board b = this;
+		for(int i=0; i<times; i++) {
+			int rowNum = r.nextInt(b.getSize()[0]);
+			int colNum = r.nextInt(b.getSize()[1]);
+			b = b.flip(rowNum, colNum);
+		}
+		return b;
+	}
+	
+	
 }
