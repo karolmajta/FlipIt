@@ -1,6 +1,6 @@
 package com.karolmajta.flipit.model;
 
-public class PieceP4Diag extends AxisSymmetricPiece {
+public class PieceP4Diag extends CenterSymmetricPiece {
 
 	public PieceP4Diag(EOrientation o) {
 		super(EPiece.P4_DIAG, o);
