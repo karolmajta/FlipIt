@@ -1,5 +1,8 @@
 package com.karolmajta.flipit.model;
 
+import java.util.HashSet;
+import java.util.Set;
+
 public class PieceP4Diag extends CenterSymmetricPiece {
 
 	public PieceP4Diag(EOrientation o) {
@@ -14,6 +17,16 @@ public class PieceP4Diag extends CenterSymmetricPiece {
 	@Override
 	public Piece copy(EOrientation o) {
 		return new PieceP4Diag(o);
+	}
+	
+	@Override
+	public Set<EOrientation> getRequiredNeighbors() {
+		Set<EOrientation> res = new HashSet<EOrientation>();
+		res.add(EOrientation.NORTH);
+		res.add(EOrientation.SOUTH);
+		res.add(EOrientation.WEST);
+		res.add(EOrientation.EAST);
+		return res;
 	}
 
 }

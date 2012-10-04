@@ -1,5 +1,7 @@
 package com.karolmajta.flipit.test.model;
 
+import java.util.Set;
+
 import com.karolmajta.flipit.model.AxisSymmetricPiece;
 import com.karolmajta.flipit.model.EOrientation;
 import com.karolmajta.flipit.model.EPiece;
@@ -19,6 +21,11 @@ public class AxisSymmetricPieceTestCase extends TestCase {
 		}
 		@Override
 		public Piece copy(EOrientation o) {
+			// TODO Auto-generated method stub
+			return null;
+		}
+		@Override
+		public Set<EOrientation> getRequiredNeighbors() {
 			// TODO Auto-generated method stub
 			return null;
 		}
